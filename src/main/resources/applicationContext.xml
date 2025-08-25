@@ -7,9 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="testBean"
-          class="app.trialProject.TestBean">
-        <constructor-arg value="Ripidipi"/>
+    <bean id="musicBean"
+          class="app.trialProject.ClassicalMusic">
     </bean>
-
 </beans>
