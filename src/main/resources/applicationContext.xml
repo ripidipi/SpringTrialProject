@@ -14,6 +14,8 @@
     <bean id="musicPlayer"
           class="app.trialProject.MusicPlayer">
         <property name="music" ref="musicBean"/>
+        <property name="name" value="Novay Volna"/>
+        <property name="volume" value="50"/>
     </bean>
 
 </beans>
