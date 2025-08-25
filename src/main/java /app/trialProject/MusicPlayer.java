@@ -1,13 +1,24 @@
 package app.trialProject;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
+@Component("musicPlayer")
+@Scope("prototype")
 public class MusicPlayer {
     private List<Music> music;
     private int currentSong;
+    @Value("${musicPlayer.name}")
     private String name;
+    @Value("${musicPlayer.volume}")
     private Integer volume;
 
+    @Autowired
     public MusicPlayer(List<Music> music) {
         this.music = music;
     }
