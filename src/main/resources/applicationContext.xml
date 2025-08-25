@@ -10,4 +10,10 @@
     <bean id="musicBean"
           class="app.trialProject.ClassicalMusic">
     </bean>
+
+    <bean id="musicPlayer"
+          class="app.trialProject.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
+
 </beans>
