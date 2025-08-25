@@ -1,5 +1,8 @@
 package app.trialProject;
 
+import org.springframework.stereotype.Component;
+
+@Component("rockMusicBean")
 public class RockMusic implements Music{
 
     public void init() {
