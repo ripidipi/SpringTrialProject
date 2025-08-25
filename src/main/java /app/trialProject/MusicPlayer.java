@@ -1,26 +1,35 @@
 package app.trialProject;
 
+import java.util.List;
+
 public class MusicPlayer {
-    private Music music;
+    private List<Music> music;
+    private int currentSong;
     private String name;
     private Integer volume;
 
-    public MusicPlayer(Music music) {
+    public MusicPlayer(List<Music> music) {
         this.music = music;
     }
 
     public MusicPlayer() {}
 
     public void play() {
-        System.out.println("Playing music " + music.getSong() + " from " + name +
-                "\nwith volume " + volume);
+        while (currentSong < music.size()){
+            System.out.print("Playing music " + music.get(currentSong++).getSong() + " from " + name +  '\n');
+            if (currentSong == 1){
+                System.out.print("\nwith volume " + volume);
+            }
+            try {Thread.sleep(1000);} catch (Exception e) {}
+        }
+        System.out.println("No music played");
     }
 
-    public void setMusic(Music music) {
+    public void setMusic(List<Music> music) {
         this.music = music;
     }
 
-    public Music getMusic() {
+    public List<Music> getMusic() {
         return music;
     }
 
