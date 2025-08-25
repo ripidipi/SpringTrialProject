@@ -16,13 +16,13 @@ public class MusicPlayer {
 
     public void play() {
         while (currentSong < music.size()){
-            System.out.print("Playing music " + music.get(currentSong++).getSong() + " from " + name +  '\n');
-            if (currentSong == 1){
-                System.out.print("\nwith volume " + volume);
+            if (currentSong == 0){
+                System.out.print("with volume " + volume + '\n');
             }
+            System.out.println("Playing music " + music.get(currentSong++).getSong() + " from " + name );
             try {Thread.sleep(1000);} catch (Exception e) {}
         }
-        System.out.println("No music played");
+        System.out.println("No music played\n");
     }
 
     public void setMusic(List<Music> music) {
